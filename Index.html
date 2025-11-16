@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>Да, это та ссылка</h1>
+<p>Ты молодец, тебе удалосьпопасть на [край интернета]. Однако ты же не думал что я так просто искуплютвой геноцид, не так ли ? Я предлагаю тебе 2 варианта, либо ты отдаешь мне 9999999999 [кромер], либо ты полностью проходишь этот квест. В это поле тебе нужно ввести то, что скрывает твой собственный подарок. Надеюсь этот [клочок бумаги] ты не потерял 
+ВВОДИ С МАЛЕНЬКОЙ БУКВЫ
+</p>
+<style>
+#secretMessage {
+    display: none; /* Скрываем сообщение по умолчанию */
+    color: green;
+    margin-top: 10px;
+}
+</style>
+<label for="secretInput">Введит секретное слово:</label>
+<input type="text" id="secretInput" name="secretInput">
+<button onclick="checkSecret()">Проверить</button>
+
+<div id="secretMessage">
+  <b>[Верно] https://drive.google.com/drive/folders/13fjMkM4KFQ0B-gNU3VZQPCWAxZtF-LUj?usp=sharing</b> 
+</div>
+
+<script>
+function checkSecret() {
+  // Получаем значение из текстового поля
+  var inputField = document.getElementById("secretInput");
+  var inputValue = inputField.value;
+
+  // Очищаем текстовое поле
+  inputField.value = "";
+
+  // Проверяем, совпадает ли ввод с секретным словом
+  if (inputValue === "маска") {
+    // Показываем секретное сообщение
+    document.getElementById("secretMessage").style.display = "block";
+  } else {
+    // Скрываем секретное сообщение (если оно было показано ранее)
+    document.getElementById("secretMessage").style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
